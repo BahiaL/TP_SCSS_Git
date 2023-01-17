@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-size: 1rem;
+  background-color: #0d6efd;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+main > div:nth-child(odd) {
+  background-color: #212529;
+}
+
+main > div:nth-child(5), main > div:nth-child(6) {
+  color: #fff;
+  padding: 3rem;
+}
+
+nav {
+  width: 100%;
+  background-color: #212529;
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  display: inline-flex;
+}
+nav ul li a {
+  color: #0d6efd;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-family: monospace;
+}
+nav ul li a:hover {
+  background-color: #fff;
+}
+
+div#accueil h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  font-weight: bold;
+}
+div#accueil h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+div#accueil img {
+  border-radius: 50%;
+  width: 25%;
+}
+
+#bouton {
+  display: flex;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  border-radius: 50%;
+  width: 3%;
+  background-color: #fff;
+  justify-content: center;
+}
+#bouton a {
+  text-decoration: none;
+}
+
+#photos {
+  display: none;
+}
+
+div.container div.row {
+  display: flex;
+  margin: 0 3rem;
+}
+div.container div.row div {
+  display: flex;
+  padding: 1em;
+}
+div.container div.row div img {
+  max-width: 100%;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */

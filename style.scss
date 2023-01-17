@@ -1,0 +1,115 @@
+$main-color: #0d6efd;
+$second-color: #212529;
+$third-color: #fff;
+$defaultSpace: 3rem;
+
+@function h1 ($type) {
+    @if $type == "size" {
+        @return calc(1.375rem + 1.5vw);
+    } @else if $type == "weight" {
+        @return bold;
+    }
+}
+
+@function h3 ($type) {
+    @if $type == "size" {
+        @return calc(1.3rem + 0.6vw);
+    } @else if $type == "weight" {
+        @return bold;
+    }
+}
+
+@function circleImg ($type) {
+    @if $type == "border-radius" {
+        @return 50%;
+    } @else if $type == "width" {
+        @return 25%;
+    }
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    background-color: $main-color;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+main > div:nth-child(odd) {
+    background-color: $second-color;
+}
+
+main > div:nth-child(5), main > div:nth-child(6) {
+    color: $third-color;
+    padding: $defaultSpace;
+}
+
+nav {
+    width: 100%;
+    background-color: $second-color;
+    display: flex;
+    justify-content: center;
+    ul {
+        list-style-type: none;        
+        li {
+            display: inline-flex;
+            a {
+                color: $main-color;
+                padding: 10px 15px;
+                text-decoration: none;
+                font-family: monospace;
+                &:hover {
+                    background-color: $third-color;
+                }
+            }
+        }
+    }
+}
+
+div#accueil {
+    h1 {
+        font-size: h1(size) ;
+        font-weight: h1(weight) ;
+    }    
+    h3 {
+        font-size: h3(size);
+    }    
+    img {
+        border-radius: circleImg(border-radius);
+        width: circleImg(width);
+    }
+}
+
+#bouton {
+    display: flex;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    border-radius: circleImg(border-radius);
+    width: 3%;    
+    background-color: $third-color;
+    justify-content: center;
+    a {
+        text-decoration: none;
+    }    
+}
+
+#photos {
+    display: none;
+}
+
+div.container {
+    div.row {
+    display: flex;
+    margin: 0 $defaultSpace; 
+        div{
+            display: flex;
+            padding: 1em;
+            img {
+                max-width: 100%;
+                height: auto;
+            } 
+        }
+    }
+}
+
